@@ -168,14 +168,14 @@ function ViewTeam() {
                             showActions={false}
                           />
                           {(isCap || isVC) && (
-                            <div className="absolute top-2 right-2 flex space-x-1">
+                            <div className="absolute top-20 right-44 flex space-x-1">
                             {isCap && (
-                              <span className="px-2 py-1 bg-red-600 text-white text-xs rounded-full font-bold">
+                              <span className="px-3 py-2 bg-red-600 text-white text-xs rounded-full font-bold">
                                 C
                               </span>
                             )}
                             {isVC && (
-                              <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full font-bold">
+                              <span className="px-3 py-2 bg-green-600 text-white text-xs rounded-full font-bold">
                                 VC
                               </span>
                             )}
