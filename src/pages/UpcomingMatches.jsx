@@ -56,7 +56,7 @@ function UpcomingMatches() {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading matches...</p>
         </div>
       </div>
@@ -69,7 +69,7 @@ function UpcomingMatches() {
         <p className="text-red-800">{error}</p>
         <button
           onClick={loadMatches}
-          className="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
+          className="mt-4 px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 font-semibold"
         >
           Retry
         </button>
@@ -80,7 +80,7 @@ function UpcomingMatches() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Upcoming Matches</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-2">Upcoming Matches</h1>
         <p className="text-gray-600">Select a match to create your fantasy team</p>
       </div>
 
@@ -134,7 +134,7 @@ function UpcomingMatches() {
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">
                       {eventName || venue}
                     </span>
                     <span className="text-sm text-gray-500">{date}</span>
@@ -149,7 +149,7 @@ function UpcomingMatches() {
                         <div className="">
                           <img src={team1logo} alt="" />
                         </div>
-                        <div className="text-lg font-bold text-gray-900">{team1}</div>
+                        <div className="text-lg font-bold text-gray-800">{team1}</div>
                         {team1Short && (
                           <div className="text-xs text-gray-500">{team1Short}</div>
                         )}
@@ -159,7 +159,7 @@ function UpcomingMatches() {
                         <div className="">
                           <img src={team2logo} alt="" />
                         </div>
-                        <div className="text-lg font-bold text-gray-900">{team2}</div>
+                        <div className="text-lg font-bold text-gray-800">{team2}</div>
                         {team2Short && (
                           <div className="text-xs text-gray-500">{team2Short}</div>
                         )}
@@ -171,13 +171,13 @@ function UpcomingMatches() {
                   <div className="flex space-x-2 mt-6">
                     <button
                       onClick={() => handleMatchClick(match)}
-                      className="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors font-medium"
+                      className="flex-1 bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition-colors font-semibold shadow-md"
                     >
                       Create Team
                     </button>
                     <button
                       onClick={() => handleViewTeams(match)}
-                      className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors font-medium"
+                      className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300 transition-colors font-semibold"
                     >
                       My Teams
                     </button>

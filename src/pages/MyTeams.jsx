@@ -43,7 +43,7 @@ function MyTeams() {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading teams...</p>
         </div>
       </div>
@@ -56,16 +56,16 @@ function MyTeams() {
         <div>
           <button
             onClick={() => navigate('/matches')}
-            className="text-indigo-600 hover:text-indigo-800 mb-4 flex items-center"
+            className="text-red-600 hover:text-red-800 mb-4 flex items-center"
           >
             ← Back to Matches
           </button>
-          <h1 className="text-3xl font-bold text-gray-900">My Teams</h1>
+          <h1 className="text-3xl font-bold text-gray-800">My Teams</h1>
           <p className="text-gray-600 mt-2">Manage your fantasy teams for this match</p>
         </div>
         <button
           onClick={handleCreateNew}
-          className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-semibold"
+          className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 font-semibold shadow-md"
         >
           + Create New Team
         </button>
@@ -76,7 +76,7 @@ function MyTeams() {
           <p className="text-gray-600 text-lg mb-4">You haven't created any teams yet</p>
           <button
             onClick={handleCreateNew}
-            className="px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 font-semibold"
+            className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 font-semibold shadow-md"
           >
             Create Your First Team
           </button>
@@ -96,8 +96,8 @@ function MyTeams() {
               >
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-gray-900">Team {index + 1}</h3>
-                    <span className="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">
+                    <h3 className="text-xl font-bold text-gray-800">Team {index + 1}</h3>
+                    <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">
                       {team.players?.length || 0}/11 Players
                     </span>
                   </div>
@@ -105,13 +105,13 @@ function MyTeams() {
                   <div className="space-y-3 mb-4">
                     <div>
                       <p className="text-sm text-gray-600">Total Credits</p>
-                      <p className="text-lg font-semibold text-gray-900">{totalCredits}/100</p>
+                      <p className="text-lg font-semibold text-gray-800">{totalCredits}/100</p>
                     </div>
 
                     {captain && (
-                      <div className="p-2 bg-indigo-50 rounded">
+                      <div className="p-2 bg-red-50 rounded border border-red-200">
                         <p className="text-xs text-gray-600">Captain</p>
-                        <p className="text-sm font-semibold text-indigo-900">
+                        <p className="text-sm font-semibold text-red-900">
                           {captain.Name || captain.name}
                         </p>
                       </div>
@@ -140,19 +140,19 @@ function MyTeams() {
                   <div className="flex space-x-2 mt-6">
                     <button
                       onClick={() => handleViewTeam(team)}
-                      className="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors font-medium text-sm"
+                      className="flex-1 bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition-colors font-semibold text-sm shadow-md"
                     >
                       View
                     </button>
                     <button
                       onClick={() => handleEditTeam(team)}
-                      className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors font-medium text-sm"
+                      className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded-full hover:bg-gray-300 transition-colors font-semibold text-sm"
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => handleDeleteTeam(team.id)}
-                      className="px-4 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition-colors font-medium text-sm"
+                      className="px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 transition-colors font-semibold text-sm"
                     >
                       Delete
                     </button>

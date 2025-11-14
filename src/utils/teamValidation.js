@@ -71,9 +71,9 @@ export const validateTeam = (selectedPlayers) => {
     teamCounts[team] = (teamCounts[team] || 0) + 1
   })
 
-  Object.entries(teamCounts).forEach(([team, count]) => {
+  Object.entries(teamCounts).forEach(([team_name, count]) => {
     if (count > 7) {
-      errors.push(`Maximum 7 players allowed from one team. ${team} has ${count} players`)
+      errors.push(`Maximum 7 players allowed from one team. ${team_name} has ${count} players`)
     }
   })
 
