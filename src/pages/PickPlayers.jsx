@@ -198,13 +198,13 @@ function PickPlayers() {
           </div>
           
           {/* Role Selection Instruction */}
-          {mobileRoleTab !== 'All' && (
+          {/* {mobileRoleTab !== 'All' && (
             <div className="mt-3 p-3 bg-white rounded-lg border border-gray-200">
               <p className="text-gray-800 font-bold text-sm">
                 Select {teamBuilder.roleCounts[mobileRoleTab] || 0} - {mobileRoleTab === 'Batsman' ? '7' : mobileRoleTab === 'Wicket Keeper' ? '5' : mobileRoleTab === 'All Rounder' ? '4' : '7'} {mobileRoleTab}
               </p>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
@@ -269,12 +269,12 @@ function PickPlayers() {
       {/* Sticky Footer Button - Mobile */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-2xl">
         <div className="flex space-x-3">
-          <button
+          {/* <button
             onClick={() => navigate(`/my-teams/${matchId}`)}
             className="flex-1 py-3 border-2 border-red-600 text-red-600 rounded-full font-bold hover:bg-red-50 transition-colors"
           >
             Team Preview
-          </button>
+          </button> */}
           <button
             onClick={handleContinue}
             disabled={!teamBuilder.validation.isValid}
