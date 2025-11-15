@@ -13,7 +13,7 @@ function MobileTeamSummary({ selectedPlayers, totalCredits, roleCounts, validati
   return (
     <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 mb-4 border border-blue-200">
       {/* Team Logos and Counts */}
-      {teams.length > 0 && (
+      {/* {teams.length > 0 && (
         <div className="flex items-center justify-center space-x-6 mb-4">
           {teams.slice(0, 2).map((team, idx) => (
             <div key={idx} className="flex flex-col items-center">
@@ -28,7 +28,7 @@ function MobileTeamSummary({ selectedPlayers, totalCredits, roleCounts, validati
             </div>
           ))}
         </div>
-      )}
+      )} */}
 
       {/* Selection Rules */}
       <div className="text-center mb-3">
