@@ -267,7 +267,7 @@ function PickPlayers() {
       />
 
       {/* Sticky Footer Button - Mobile */}
-      <div className="md:hidden fixed bottom-0 left-20 right-20 bg-white border-t border-gray-200 mb-4 shadow-2xl">
+      <div className="md:hidden fixed bottom-0 left-20 right-20 border-gray-200 mb-4">
         <div className="flex space-x-3">
           {/* <button
             onClick={() => navigate(`/my-teams/${matchId}`)}
