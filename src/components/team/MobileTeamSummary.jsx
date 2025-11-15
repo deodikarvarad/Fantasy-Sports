@@ -31,9 +31,9 @@ function MobileTeamSummary({ selectedPlayers, totalCredits, roleCounts, validati
       )} */}
 
       {/* Selection Rules */}
-      <div className="text-center mb-3">
-        <p className="text-xs text-gray-600 mb-2">Max 7 players from a team</p>
-        <div className="flex items-center justify-center space-x-2 mb-2">
+      <div className="text-center mb-1">
+        <p className="text-xs text-gray-600 ">Max 7 players from a team</p>
+        <div className="flex items-center justify-center space-x-2 ">
           <span className="text-lg font-bold text-gray-800">{selectedCount}/11 Players</span>
         </div>
         <p className="text-sm font-semibold text-gray-700">
@@ -42,7 +42,7 @@ function MobileTeamSummary({ selectedPlayers, totalCredits, roleCounts, validati
       </div>
 
       {/* Player Progress Circles */}
-      <div className="flex justify-center space-x-1 mb-3">
+      <div className="flex justify-center space-x-1 mb-1">
         {Array.from({ length: 11 }).map((_, idx) => (
           <div
             key={idx}
