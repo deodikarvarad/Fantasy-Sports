@@ -80,7 +80,7 @@ function UpcomingMatches() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">Upcoming Matches</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">Upcoming Matches</h1>
         <p className="text-gray-600">Select a match to create your fantasy team</p>
       </div>
 
@@ -89,7 +89,7 @@ function UpcomingMatches() {
           <p className="text-gray-600 text-lg">No upcoming matches available</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-3 gap-6">
           {matches.map((match, index) => {
             const matchId = match.id || match.Match_Id || match.match_id || match.MatchId
             const team1 = match.t1_name || match.Team1 || match.team1 || match.Team_A || 'Team A'
@@ -134,38 +134,38 @@ function UpcomingMatches() {
               >
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">
+                    <span className="px-4 py-2 bg-red-100 text-red-800 text-xs font-semibold rounded-full">
                       {eventName || venue}
                     </span>
-                    <span className="text-sm text-gray-500">{date}</span>
+                    <span className="text-lg text-gray-500">{date}</span>
                   </div>
                   
                   <div className="text-center mb-4">
                     {matchName && (
-                      <p className="text-xs text-gray-500 mb-2">{matchName}</p>
+                      <p className="text-lg text-gray-500 mb-2">{matchName}</p>
                     )}
                     <div className="flex items-center justify-center space-x-4 mb-2">
                       <div className="text-center">
                         <div className="">
                           <img src={team1logo} alt="" />
                         </div>
-                        <div className="text-lg font-bold text-gray-800">{team1}</div>
+                        <div className="text-2xl font-bold text-gray-800">{team1}</div>
                         {team1Short && (
-                          <div className="text-xs text-gray-500">{team1Short}</div>
+                          <div className="text-sm text-gray-500">{team1Short}</div>
                         )}
                       </div>
-                      <div className="text-gray-400 font-bold">VS</div>
+                      <div className="text-gray-400 font-bold text-2xl">VS</div>
                       <div className="text-center">
                         <div className="">
                           <img src={team2logo} alt="" />
                         </div>
-                        <div className="text-lg font-bold text-gray-800">{team2}</div>
+                        <div className="text-2xl font-bold text-gray-800">{team2}</div>
                         {team2Short && (
-                          <div className="text-xs text-gray-500">{team2Short}</div>
+                          <div className="text-sm text-gray-500">{team2Short}</div>
                         )}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-500">{time}</p>
+                    <p className="text-lg text-gray-500">{time}</p>
                   </div>
 
                   <div className="flex space-x-2 mt-6">

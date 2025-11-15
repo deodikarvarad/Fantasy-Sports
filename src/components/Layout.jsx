@@ -16,21 +16,21 @@ function Layout({ children }) {
           <div className="flex justify-between h-16">
             <div className="flex">
               <Link to="/" className="flex items-center">
-                <span className="text-2xl font-bold text-red-600">🏏 Fantasy Sports</span>
+                <span className="text-2xl font-bold text-red-600">Fantasy Sports</span>
               </Link>
             </div>
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <Link
-                to="/matches"
+                to="/my-teams"
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  location.pathname === '/matches' || location.pathname === '/'
+                  location.pathname === '/my-teams' || location.pathname === '/'
                     ? 'bg-red-600 text-white'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
-                Matches
+                My Teams
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

@@ -166,6 +166,7 @@ function PickCaptain() {
               const role = player.Role || player.role || 'N/A'
               const team = player.team_name || player.Team || player.team || 'N/A'
               const credits = player.event_player_credit || player.Credits || player.credits || 0
+              const points = player.event_total_points || player.Points || player.points || 0
               const isCap = isCaptain(player)
               const isVC = isViceCaptain(player)
 
@@ -186,7 +187,8 @@ function PickCaptain() {
                       <p className="text-sm text-gray-600">{role}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm font-bold text-red-600">{credits}</p>
+                      <p className="text-sm font-bold text-red-600">{points}</p>
+                      <p className="text-xs text-gray-500">Pts</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between mt-3">
@@ -199,7 +201,7 @@ function PickCaptain() {
                           onClick={() => handleCaptainSelect(player)}
                           className="px-2 py-1 bg-red-600 text-white text-xs rounded-full hover:bg-red-700 font-semibold"
                         >
-                          Captain
+                          C
                         </button>
                       )}
                       {!isVC && (
