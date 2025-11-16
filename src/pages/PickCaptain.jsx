@@ -196,32 +196,20 @@ function PickCaptain() {
                       {team}
                     </span>
                     <div className="flex space-x-2">
-                      {!isCap && (
-                        <button
-                          onClick={() => handleCaptainSelect(player)}
-                          className="px-2 py-1 bg-red-600 text-white text-xs rounded-full hover:bg-red-700 font-semibold"
-                        >
-                          C
-                        </button>
-                      )}
-                      {!isVC && (
-                        <button
-                          onClick={() => handleViceCaptainSelect(player)}
-                          className="px-2 py-1 bg-green-600 text-white text-xs rounded-full hover:bg-green-700 font-semibold"
-                        >
-                          VC
-                        </button>
-                      )}
-                      {isCap && (
-                        <span className="px-2 py-1 bg-red-600 text-white text-xs rounded-full font-semibold">
-                          C
-                        </span>
-                      )}
-                      {isVC && (
-                        <span className="px-2 py-1 bg-green-600 text-white text-xs rounded-full font-semibold">
-                          VC
-                        </span>
-                      )}
+                      <button
+                        onClick={() => handleCaptainSelect(player)}
+                        className={`px-6 py-5 text-xs rounded-full font-semibold border 
+                          ${isCap ? "bg-red-600 text-white" : "bg-white text-black border-red-600"}`}
+                      >
+                        C
+                      </button>
+                      <button
+                        onClick={() => handleViceCaptainSelect(player)}
+                        className={`px-6 py-5 text-xs rounded-full font-semibold border 
+                          ${isVC ? "bg-green-600 text-white" : "bg-white text-black border-green-600"}`}
+                      >
+                        VC
+                      </button>
                     </div>
                   </div>
                 </div>

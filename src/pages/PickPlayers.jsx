@@ -174,7 +174,7 @@ function PickPlayers() {
           {/* Role Tabs */}
           <div className="bg-blue-50 rounded-lg p-2 mt-4 flex space-x-2 overflow-x-auto">
             {[
-              { key: 'All', label: 'All' },
+              // { key: 'All', label: 'All' },
               { key: 'Wicket Keeper', label: `WK (${teamBuilder.roleCounts['Wicket Keeper'] || 0})` },
               { key: 'Batsman', label: `Batsman (${teamBuilder.roleCounts['Batsman'] || 0})` },
               { key: 'All Rounder', label: `AR (${teamBuilder.roleCounts['All Rounder'] || 0})` },
@@ -240,9 +240,9 @@ function PickPlayers() {
         <main className="flex-1 md:ml-80 p-4 md:p-6 pb-24 md:pb-6 overflow-y-auto md:h-[calc(100vh-4rem)]">
           {/* Players List */}
           <div className="bg-white rounded-xl p-4 md:p-6 border border-gray-200 shadow-sm">
-            <h2 className="text-gray-800 text-xl font-bold mb-4">
+            {/* <h2 className="text-gray-800 text-xl font-bold mb-4">
               Available Players ({filteredPlayers.length})
-            </h2>
+            </h2> */}
             <div className="md:max-h-[calc(100vh-12rem)] md:overflow-y-auto">
               <PlayersList
                 players={filteredPlayers}
