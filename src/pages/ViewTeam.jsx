@@ -168,7 +168,7 @@ function ViewTeam() {
                             showActions={false}
                           />
                           {(isCap || isVC) && (
-                            <div className="absolute top-[4.5rem] right-[20rem] flex space-x-1">
+                            <div className="absolute top-[4.5rem] right-auto pl-2 flex space-x-1">
                             {isCap && (
                               <span className="px-3 py-2 bg-red-600 text-white text-xs rounded-full font-bold">
                                 C
